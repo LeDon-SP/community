@@ -2,6 +2,8 @@ package life.ledon.community.controller;
 
 import life.ledon.community.dto.AccessTokenDTO;
 import life.ledon.community.dto.GitHubUser;
+import life.ledon.community.mapper.UserMapper;
+import life.ledon.community.model.User;
 import life.ledon.community.provider.GitHubProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,11 +12,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.UUID;
 
 @Controller
 public class AuthorizeController {
     @Autowired
     private GitHubProvider gitHubProvider;
+
+    @Autowired
+    private UserMapper userMapper;
 
     @Value("${github.client.id}")
     private String clientId;
@@ -36,8 +42,17 @@ public class AuthorizeController {
         accessTokenDTO.setRedirect_uri(redirectUri);
         accessTokenDTO.setState(state);
         String accessToken = gitHubProvider.getAccessToken(accessTokenDTO);
-        GitHubUser user = gitHubProvider.getUser(accessToken);
-        if (user != null) {
+        GitHubUser gitHubUser = gitHubProvider.getUser(accessToken);
+        if (gitHubUser != null) {
+            User user = new User();
+            user.setToken(UUID.randomUUID().toString());
+            user.setName(gitHubUser.getName());
+            user.setAccount_id(String.valueOf(gitHubUser.getId()));
+            user.setAvatar_url(gitHubUser.getAvatarUrl());
+            user.setEmail(gitHubUser.getEmail());
+            user.setGmt_create(System.currentTimeMillis());
+            user.setGmt_modified(user.getGmt_create());
+            userMapper.insert(user);
             //登录成功，写cookie和session
             request.getSession().setAttribute("user", user);
             return "redirect:/";

@@ -2,7 +2,7 @@ package life.ledon.community.dto;
 
 public class GitHubUser {
     private String name;
-    private String avatar_url;
+    private String avatarUrl;
     private Long id;
     private String email;
     private String bio;
@@ -15,12 +15,12 @@ public class GitHubUser {
         this.name = name;
     }
 
-    public String getAvatar_url() {
-        return avatar_url;
+    public String getAvatarUrl() {
+        return avatarUrl;
     }
 
-    public void setAvatar_url(String avatar_url) {
-        this.avatar_url = avatar_url;
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 
     public Long getId() {
