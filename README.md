@@ -12,3 +12,5 @@
 [GitHub OAuth](https://developer.github.com/apps/building-oauth-apps/)
 
 [MvnRepository](https://mvnrepository.com/)
+
+[Lombok](https://projectlombok.org)
