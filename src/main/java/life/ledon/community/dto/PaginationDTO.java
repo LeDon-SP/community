@@ -19,10 +19,9 @@ public class PaginationDTO {
 
     private Integer totalPage;
 
-    public void setPagination(Integer totalCount, Integer page, Integer size) {
-        //计算总页数
-        totalPage = (totalCount % size == 0) ? (totalCount / size) : (totalCount / size + 1);
+    public void setPagination(Integer totalPage, Integer page) {
 
+        this.totalPage = totalPage;
         //给当前页赋值
         this.page = page;
 
