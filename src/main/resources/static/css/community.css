@@ -1,41 +1,52 @@
-body{
+body {
     background-color: #efefef;
 }
-.main{
+
+.main {
     margin: 30px 50px 30px 50px;
     background-color: #ffffff;
 }
-.btn-publish{
+
+.btn-publish {
     float: right;
     margin-bottom: 20px;
 }
-.media-object{
+
+.media-object {
     width: 42px;
     height: 42px;
 }
-.media-heading a:hover{
+
+.media-heading a:hover {
     color: #eea236;
     text-decoration: none;
 }
-.text-desc{
+
+.text-desc {
     font-size: 12px;
     font-weight: normal;
     color: #999;
 }
 
-.profile .section{
-    margin-top:30px;
+.profile .section {
+    margin-top: 30px;
 }
 
-.community-menu{
+.community-menu {
     font-size: 13px;
     color: #999999;
     text-decoration: none;
 }
-.community-menu:hover{
+
+.community-menu:hover {
     color: #eea236;
     text-decoration: none;
 }
-.question{
+
+.question {
     margin-top: 30px;
+}
+
+.jumbotron {
+    margin: 50px;
 }

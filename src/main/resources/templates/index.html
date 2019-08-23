@@ -21,7 +21,7 @@
                 <div class="media-left">
                     <a href="#">
                         <img class="media-object img-rounded"
-                             th:src="${question.user.avatar_url}" alt="头像">
+                             th:src="${question.user.avatarUrl}" alt="头像">
                     </a>
                 </div>
                 <div class="media-body">
@@ -30,10 +30,10 @@
                     </h4>
                     <span th:text="${question.description}"></span><br>
                     <span class="text-desc">
-                        <span th:text="${question.comment_count}"></span>个回复 ·
-                        <span th:text="${question.view_count}"></span>次浏览 ·
+                        <span th:text="${question.commentCount}"></span>个回复 ·
+                        <span th:text="${question.viewCount}"></span>次浏览 ·
                         <span id="current-time"
-                              th:datetime="${#calendars.format(question.gmt_create,'yyyy-MM-dd HH:mm:ss')}"></span>
+                              th:datetime="${#calendars.format(question.gmtCreate,'yyyy-MM-dd HH:mm:ss')}"></span>
                     </span>
                 </div>
             </div>

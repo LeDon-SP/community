@@ -2,7 +2,6 @@ package life.ledon.community.controller;
 
 import life.ledon.community.dto.AccessTokenDTO;
 import life.ledon.community.dto.GitHubUser;
-import life.ledon.community.mapper.UserMapper;
 import life.ledon.community.model.User;
 import life.ledon.community.provider.GitHubProvider;
 import life.ledon.community.service.UserService;
@@ -39,10 +38,10 @@ public class AuthorizeController {
                            @RequestParam(name = "state") String state,
                            HttpServletResponse response) {
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
-        accessTokenDTO.setClient_id(clientId);
-        accessTokenDTO.setClient_secret(clientSecret);
+        accessTokenDTO.setClientId(clientId);
+        accessTokenDTO.setClientSecret(clientSecret);
         accessTokenDTO.setCode(code);
-        accessTokenDTO.setRedirect_uri(redirectUri);
+        accessTokenDTO.setRedirectUri(redirectUri);
         accessTokenDTO.setState(state);
         String accessToken = gitHubProvider.getAccessToken(accessTokenDTO);
         GitHubUser gitHubUser = gitHubProvider.getUser(accessToken);
@@ -51,8 +50,8 @@ public class AuthorizeController {
             String token = UUID.randomUUID().toString();
             user.setToken(token);
             user.setName(gitHubUser.getName());
-            user.setAccount_id(String.valueOf(gitHubUser.getId()));
-            user.setAvatar_url(gitHubUser.getAvatar_url());
+            user.setAccountId(String.valueOf(gitHubUser.getId()));
+            user.setAvatarUrl(gitHubUser.getAvatarUrl());
             user.setEmail(gitHubUser.getEmail());
 
             userService.createOrUpdate(user);
