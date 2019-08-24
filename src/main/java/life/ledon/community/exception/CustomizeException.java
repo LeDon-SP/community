@@ -1,12 +1,14 @@
 package life.ledon.community.exception;
 
+/*
 public class CustomizeException extends RuntimeException {
     private String massage;
 
-    public CustomizeException(ICustomizeErrorCode errorCode){
+    public CustomizeException(ICustomizeErrorCode errorCode) {
         this.massage = errorCode.getMessage();
     }
-    public CustomizeException(String massage){
+
+    public CustomizeException(String massage) {
         this.massage = massage;
     }
 
@@ -15,3 +17,4 @@ public class CustomizeException extends RuntimeException {
         return massage;
     }
 }
+*/

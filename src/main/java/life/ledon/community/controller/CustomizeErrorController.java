@@ -1,6 +1,6 @@
 package life.ledon.community.controller;
 
-import org.springframework.boot.web.servlet.error.ErrorController;
+/*import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -43,4 +43,4 @@ public class CustomizeErrorController implements ErrorController {
             return HttpStatus.INTERNAL_SERVER_ERROR;
         }
     }
-}
+}*/

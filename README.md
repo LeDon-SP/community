@@ -13,12 +13,13 @@
 
 [MvnRepository](https://mvnrepository.com/)
 
-[Lombok](https://projectlombok.org)
-
 [Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
 
 [TimeAgo](https://blog.csdn.net/myme95/article/details/89133862)
 
+
+## 工具
+[Lombok](https://projectlombok.org)
 ```
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```

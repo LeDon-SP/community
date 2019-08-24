@@ -33,7 +33,8 @@
         <table tableName="user" domainObjectName="User" >
         </table>
         <table tableName="question" domainObjectName="Question" >
-            <columnOv   erride column="description" javaType="java.lang.String" jdbcType="LONGVARCHAR"/>
+        </table>
+        <table tableName="comment" domainObjectName="Comment" >
         </table>
 
     </context>

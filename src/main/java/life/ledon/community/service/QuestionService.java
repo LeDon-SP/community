@@ -2,8 +2,9 @@ package life.ledon.community.service;
 
 import life.ledon.community.dto.PaginationDTO;
 import life.ledon.community.dto.QuestionDTO;
-import life.ledon.community.exception.CustomizeErrorCode;
-import life.ledon.community.exception.CustomizeException;
+/*import life.ledon.community.exception.CustomizeErrorCode;
+import life.ledon.community.exception.CustomizeException;*/
+import life.ledon.community.mapper.QuestionExtMapper;
 import life.ledon.community.mapper.QuestionMapper;
 import life.ledon.community.mapper.UserMapper;
 import life.ledon.community.model.Question;
@@ -24,6 +25,9 @@ public class QuestionService {
 
     @Autowired
     private QuestionMapper questionMapper;
+
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     public PaginationDTO list(Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
@@ -104,9 +108,9 @@ public class QuestionService {
 
     public QuestionDTO getById(Integer id) {
         Question question = questionMapper.selectByPrimaryKey(id);
-        if (question == null){
+        /*if (question == null){
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
-        }
+        }*/
         QuestionDTO questionDTO = new QuestionDTO();
         BeanUtils.copyProperties(question, questionDTO);
         User user = userMapper.selectByPrimaryKey(question.getCreator());
@@ -133,9 +137,16 @@ public class QuestionService {
             QuestionExample example = new QuestionExample();
             example.createCriteria().andIdEqualTo(question.getId());
             int updated = questionMapper.updateByExampleSelective(updateQuestion, example);
-            if (updated != 1){
+            /*if (updated != 1){
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
-            }
+            }*/
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
