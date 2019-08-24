@@ -67,6 +67,7 @@ public class PublishController {
         }
 
         Question question = new Question();
+        question.setId(id);
         question.setTitle(title);
         question.setDescription(description);
         question.setTag(tag);
