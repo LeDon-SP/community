@@ -18,10 +18,17 @@
     <result column="tag" jdbcType="VARCHAR" property="tag" />
   </resultMap>
 
-  <update id="incView" parameterType="map">
+  <update id="incView" parameterType="life.ledon.community.model.Question">
     update question
     set
     view_count = view_count + #{viewCount,jdbcType=INTEGER}
+    where id =#{id}
+  </update>
+
+  <update id="incCommentCount" parameterType="life.ledon.community.model.Question">
+    update question
+    set
+    comment_count = comment_count + #{commentCount,jdbcType=INTEGER}
     where id =#{id}
   </update>
 </mapper>
