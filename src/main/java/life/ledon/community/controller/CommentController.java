@@ -29,14 +29,14 @@ public class CommentController {
                        HttpServletRequest request){
 
         User user = (User) request.getSession().getAttribute("user");
-        /*if (user==null){
+        if (user==null){
             return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
-        }*/
+        }
         Comment comment = new Comment();
         comment.setParentId(commentDTO.getParentId());
         comment.setContent(commentDTO.getContent());
         comment.setType(commentDTO.getType());
-        comment.setCommentator(1L);
+        comment.setCommentator(user.getId());
         comment.setGmtCreate(System.currentTimeMillis());
         comment.setGmtModified(System.currentTimeMillis());
         comment.setLikeCount(0L);

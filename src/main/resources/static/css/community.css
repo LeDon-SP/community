@@ -17,6 +17,23 @@ body {
     height: 42px;
 }
 
+.comment-media .media-heading{
+    padding-top: 13px;
+}
+
+.comment-media{
+    margin-bottom: 10px;
+}
+
+.comment-area{
+    margin-bottom: 55px;
+}
+
+.comment-area .btn-comment{
+    margin-top: 10px;
+    float: right;
+}
+
 .media-heading a:hover {
     color: #eea236;
     text-decoration: none;
