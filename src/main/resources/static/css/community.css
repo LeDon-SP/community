@@ -18,11 +18,16 @@ body {
 }
 
 .comment-media .media-heading{
-    padding-top: 13px;
+    padding-top: 0px;
 }
 
 .comment-media{
     margin-bottom: 10px;
+}
+
+.comment-part{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
 }
 
 .comment-area{
@@ -32,6 +37,29 @@ body {
 .comment-area .btn-comment{
     margin-top: 10px;
     float: right;
+}
+
+.comment-sp{
+    margin-top: 0px;
+}
+
+.comment-content{
+    line-height:23px;
+}
+
+.comment-menu{
+    color: #999999;
+    margin-top: 8px;
+}
+
+.comment-menu .icon{
+    margin-right: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.comment-menu .icon:hover{
+    color: #eea236;
 }
 
 .media-heading a:hover {
@@ -50,8 +78,10 @@ body {
 }
 
 .community-menu {
+    display: block;
     font-size: 13px;
     color: #999999;
+    margin-bottom: 15px;
     text-decoration: none;
 }
 

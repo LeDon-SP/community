@@ -1,6 +1,6 @@
 package life.ledon.community.controller;
 
-import life.ledon.community.dto.CommentDTO;
+import life.ledon.community.dto.CommentCreateDTO;
 import life.ledon.community.dto.ResultDTO;
 import life.ledon.community.exception.CustomizeErrorCode;
 import life.ledon.community.model.Comment;
@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 public class CommentController {
@@ -25,7 +23,7 @@ public class CommentController {
 
     @ResponseBody
     @RequestMapping(value = "/comment",method = RequestMethod.POST)
-    public Object post(@RequestBody CommentDTO commentDTO,
+    public Object post(@RequestBody CommentCreateDTO commentDTO,
                        HttpServletRequest request){
 
         User user = (User) request.getSession().getAttribute("user");
