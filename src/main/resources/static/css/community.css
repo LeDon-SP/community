@@ -2,14 +2,24 @@ body {
     background-color: #efefef;
 }
 
-.main {
-    margin: 30px 50px 30px 50px;
+.box{
     background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    border-radius:5px;
+    /*2fa9ff*/
+}
+.main {
+    margin: 30px auto;
+    width: 65%;
 }
 
 .btn-publish {
     float: right;
     margin-bottom: 20px;
+}
+
+.top-info{
+    padding: 10px 15px;
 }
 
 .media-object {
@@ -31,12 +41,17 @@ body {
 }
 
 .comment-area{
-    margin-bottom: 55px;
+    margin-bottom: 10px;
 }
 
 .comment-area .btn-comment{
     margin-top: 10px;
     float: right;
+}
+
+.comment-count{
+    margin-top: 15px;
+    padding-top: 20px;
 }
 
 .comment-sp{
@@ -65,6 +80,11 @@ body {
 .media-heading a:hover {
     color: #eea236;
     text-decoration: none;
+}
+
+.comment-input{
+    margin-top: 15px;
+    padding-top: 35px;
 }
 
 .text-desc {
