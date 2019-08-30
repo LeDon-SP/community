@@ -2,12 +2,13 @@ body {
     background-color: #efefef;
 }
 
-.box{
+.box {
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0,0,0,.05);
-    border-radius:5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+    border-radius: 5px;
     /*2fa9ff*/
 }
+
 .main {
     margin: 30px auto;
     width: 65%;
@@ -18,7 +19,7 @@ body {
     margin-bottom: 20px;
 }
 
-.top-info{
+.top-info {
     padding: 10px 15px;
 }
 
@@ -27,53 +28,66 @@ body {
     height: 42px;
 }
 
-.comment-media .media-heading{
+.comment-media .media-heading {
     padding-top: 0px;
 }
 
-.comment-media{
+.comment-media {
     margin-bottom: 10px;
 }
 
-.comment-part{
+.comment-part {
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
 
-.comment-area{
+.comment-area {
     margin-bottom: 10px;
 }
 
-.comment-area .btn-comment{
+.comment-area .btn-comment {
     margin-top: 10px;
     float: right;
 }
 
-.comment-count{
+.comment-count {
     margin-top: 15px;
     padding-top: 20px;
 }
 
-.comment-sp{
+.comment-sp {
     margin-top: 0px;
 }
 
-.comment-content{
-    line-height:23px;
+.comment-content {
+    line-height: 23px;
 }
 
-.comment-menu{
+.comment-menu {
     color: #999999;
     margin-top: 8px;
 }
 
-.comment-menu .icon{
+.comment-menu .icon {
     margin-right: 6px;
     font-size: 15px;
     cursor: pointer;
 }
 
-.comment-menu .icon:hover{
+.comment-menu .active {
+    color: #eea236;
+}
+
+.comment-menu .icon:hover {
+    color: #eea236;
+}
+
+.comment-menu .comment-icon{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.comment-menu .comment-icon:hover {
     color: #eea236;
 }
 
@@ -82,7 +96,7 @@ body {
     text-decoration: none;
 }
 
-.comment-input{
+.comment-input {
     margin-top: 15px;
     padding-top: 35px;
 }
@@ -103,6 +117,17 @@ body {
     color: #999999;
     margin-bottom: 15px;
     text-decoration: none;
+}
+
+.sub-comments {
+    margin-top: 15px;
+    border: 1px solid #eee;
+    padding-top: 15px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+.sub-comments .sub-btn{
+    margin: 10px 0;
 }
 
 .community-menu:hover {

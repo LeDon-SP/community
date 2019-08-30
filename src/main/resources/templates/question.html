@@ -7,7 +7,9 @@
     <link rel="stylesheet" th:href="@{~/css/bootstrap-theme.min.css}">
     <link rel="stylesheet" th:href="@{~/css/community.css}">
     <script th:src="@{~/js/jquery-3.4.1.min.js}"></script>
-    <script th:src="@{~/js/bootstrap.min.js}" type="application/javascript"></script>
+    <script th:src="@{~/js/bootstrap.min.js}"></script>
+    <script th:src="@{~/js/timeago.js}"></script>
+    <script th:src="@{~/js/moment.js}"></script>
     <script th:src="@{~/js/community.js}"></script>
 
 </head>
@@ -55,7 +57,7 @@
                                  th:src="${comment.user.avatarUrl}" alt="头像">
                         </a>
                     </div>
-                    <div class="media-body">
+                    <div class="media-body" th:id="${'comment-body-'+comment.id}">
                         <h5 class="media-heading">
                             <span th:text="${comment.user.name}"></span>
                         </h5>
@@ -64,14 +66,30 @@
                         </div>
                         <div class="comment-menu">
                             <span class="glyphicon glyphicon-thumbs-up icon"></span>
-                            <span class="glyphicon glyphicon-comment icon"></span>
+                            <span class="comment-icon" th:data-id="${comment.id}" onclick="collapseComments(this)">
+                                <span class="glyphicon glyphicon-comment"></span>
+                                <span th:text="${comment.commentCount}"></span>
+                            </span>
                             <span class="current-time pull-right"
                                   th:datetime="${#calendars.format(comment.gmtCreate,'yyyy-MM-dd HH:mm:ss')}"></span>
+                        </div>
+
+                        <!--二级评论-->
+                        <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 sub-comments collapse"
+                             th:id="${'comment-'+comment.id}">
+                            <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12">
+                                <input type="text" class="form-control" placeholder="评论一下..."
+                                       th:id="${'input-'+comment.id}">
+                                <button type="button" class="btn btn-success pull-right sub-btn" onclick="comment(this)"
+                                        th:data-id="${comment.id}">评论
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!--评论输入框-->
         <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 box comment-input">
             <div id="comment_section" class="comment-area col-lg-12 .col-md-12 .col-sm-12 .col-xs-12">
@@ -118,7 +136,6 @@
 </div>
 
 </body>
-<script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
 <script>
     // 自动更新
     var timeagoInstance = timeago();// 实例

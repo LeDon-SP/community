@@ -1,0 +1,156 @@
+[33mcommit c3b8b809df15a172d7ae5e1b92d4eda0a0470539[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Wed Aug 28 22:07:13 2019 +0800
+
+    修改全局样式CSS
+
+[33mcommit e7ff13eb61ab30e3fe4ea499e5d44d5e8f97e0d5[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Tue Aug 27 22:24:56 2019 +0800
+
+    add 评论展示功能
+
+[33mcommit 570c5c3aebf8841a72696b575ed4a8b57a69514e[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Mon Aug 26 22:56:42 2019 +0800
+
+    add comment page
+
+[33mcommit 111ed352900ae931796acf4e8277530b9cd3e2c1[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Sun Aug 25 22:40:43 2019 +0800
+
+    add comment Exception
+
+[33mcommit 4851e7d54d213ad57ffa355ca8a4d610298a5911[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Sat Aug 24 22:15:29 2019 +0800
+
+    修复编辑问题后走的是新增问题方法的BUG
+
+[33mcommit f61bac186003e216e3d10bd84f7b57708f1b83b5[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Sat Aug 24 22:04:58 2019 +0800
+
+    新增阅读数功能。增加评论表相关实体类Mapper
+
+[33mcommit 946c65499447c160b0ac86e6940e43b0e9007e9d[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Sat Aug 24 00:26:17 2019 +0800
+
+    add mybatis generator for create Usermapper,QuestionMapper,and 新增错误处理页面功能
+
+[33mcommit b980e6781f107c8de3fc8f219e49ee38775ceaac[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Wed Aug 21 22:50:49 2019 +0800
+
+    add 文章详情页 拦截器 分离出UserService层 补充退出登录功能 修复登录重新创建账户的问题
+
+[33mcommit ce2c89b4cef89d9726d5ebba85b5dd1d019279a9[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Mon Aug 19 22:53:26 2019 +0800
+
+    add 问题中心，导航栏分离
+
+[33mcommit fe9708d4614c9c15b48393da0dcf5a6b8832ba1a[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Sun Aug 18 23:21:11 2019 +0800
+
+    add pagination for index
+
+[33mcommit 83a16ada230965a0a197c33ddeb10c3014b86864[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Sat Aug 17 20:56:42 2019 +0800
+
+    add index and questionList and show time style
+
+[33mcommit fab6271d7d67c2065d0f9cb4c908589a34711e82[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Sat Aug 17 17:00:53 2019 +0800
+
+    add lombok
+
+[33mcommit 88701ab8ffdc60d0359249d1ae1f438c4515e87d[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Fri Aug 16 21:57:13 2019 +0800
+
+    add publishController and class Question
+
+[33mcommit e2bffded6946924f21abac06f36187e42e2064ce[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Thu Aug 15 22:20:11 2019 +0800
+
+    add publish html
+
+[33mcommit 5c672b96ea85452a86c6c3481b8125af2aa033a6[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Thu Aug 15 21:12:27 2019 +0800
+
+    add check cookies
+
+[33mcommit b59c7fd6015f5380357c7db24971e15439fa133b[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Thu Aug 15 18:59:42 2019 +0800
+
+    add MySQL
+
+[33mcommit 1e29c69c2570cfe1e67d10a46b88dda1f0afa891[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Wed Aug 14 21:37:28 2019 +0800
+
+    finish OAuth
+
+[33mcommit 65be584d755e07a2ebe3e08ee1b220015a7805f3[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Wed Aug 14 17:52:55 2019 +0800
+
+    add github oauth
+
+[33mcommit 7372ac0adf8cea8e6d7485ac1a4c69ba1dfd5801[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Tue Aug 13 22:33:24 2019 +0800
+
+    add Bootstrap
+
+[33mcommit a85b6fecfdcbbd18afad0286b78b8798256aa595[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Tue Aug 13 19:16:07 2019 +0800
+
+    IndexController
+
+[33mcommit 49a0727bf7ca1de8104310a8e8c936f81fed790e[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Tue Aug 13 18:54:16 2019 +0800
+
+    add index and BootStrap
+
+[33mcommit 8ac79f071f25e16a9a848cb1ef7ce2e36a812cd1[m
+Author: LeDon <1021752017@qq.com>
+Date:   Tue Aug 13 18:25:40 2019 +0800
+
+    Delete READEME.md
+
+[33mcommit 07204928a7ad9f02b9d43cbd2755c96808e95fd3[m
+Merge: 391baa7 6163fba
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Tue Aug 13 18:24:23 2019 +0800
+
+    Merge branch 'master' of github.com:LeDon-SP/community
+
+[33mcommit 391baa7639ef1bf4c99573305a90227e0fba4600[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Tue Aug 13 18:19:28 2019 +0800
+
+    add readme
+
+[33mcommit 6163fbaf1f5be8598aabfa29d71b4c6ba804c1eb[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Tue Aug 13 18:19:28 2019 +0800
+
+    add readme
+
+[33mcommit 3bb781672ab0ed2d9305ad41294f7e7294e357cb[m
+Author: LeDon-SP <1021752017@qq.com>
+Date:   Tue Aug 13 18:09:51 2019 +0800
+
+    community project

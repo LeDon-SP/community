@@ -7,7 +7,8 @@
     <link rel="stylesheet" th:href="@{~/css/bootstrap-theme.min.css}">
     <link rel="stylesheet" th:href="@{~/css/community.css}">
     <script th:src="@{~/js/jquery-3.4.1.min.js}"></script>
-    <script th:src="@{~/js/bootstrap.min.js}" type="application/javascript"></script>
+    <script th:src="@{~/js/bootstrap.min.js}"></script>
+    <script th:src="@{~/js/timeago.js}"></script>
 </head>
 <script type="application/javascript">
     window.onload = function () {
@@ -93,10 +94,10 @@
 </div>
 
 </body>
-<script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
 <script>
     // 自动更新
     var timeagoInstance = timeago();// 实例
+
     timeagoInstance.render(document.querySelectorAll('#current-time'), 'zh_CN');
 </script>
 </html>
