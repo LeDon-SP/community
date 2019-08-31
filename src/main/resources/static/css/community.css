@@ -139,6 +139,31 @@ body {
     margin-top: 30px;
 }
 
+.question-tag{
+    margin-right: 5px;
+}
+
+.quesrion-related{
+    line-height: 20px;
+    font-size: 14px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.quesrion-related a:hover{
+    color: #eea236;
+    text-decoration: none;
+}
+
 .jumbotron {
     margin: 50px;
+}
+
+.related-bottom{
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+.right-words{
+    text-align:center;
 }
