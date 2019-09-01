@@ -9,6 +9,7 @@
     <script th:src="@{~/js/jquery-3.4.1.min.js}"></script>
     <script th:src="@{~/js/bootstrap.min.js}"></script>
     <script th:src="@{~/js/timeago.js}"></script>
+    <script th:src="@{~/js/community.js}"></script>
 </head>
 <body>
 
@@ -27,7 +28,7 @@
                 <div class="form-group">
                     <label for="title">问题标题（简单扼要）：</label>
                     <input type="text" class="form-control" th:value="${title}" id="title" name="title"
-                           placeholder="输入标题">
+                           placeholder="输入标题" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="description">问题补充（必填，请参照右侧提示）：</label>
@@ -36,8 +37,32 @@
                 </div>
                 <div class="form-group">
                     <label for="tag">添加标签：</label>
-                    <input type="text" class="form-control" id="tag" th:value="${tag}" name="tag"
-                           placeholder="输入标签，以逗号分隔">
+                    <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag"
+                           placeholder="输入标签，以逗号分隔" autocomplete="off"
+                           onclick="showSelectTag()">
+                    <div id="select-tag" class="publish-tag-tab">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" th:each="selectCategory:${tags}">
+                                <a th:href="${'#'+selectCategory.categoryName}" aria-controls="home" role="tab"
+                                   data-toggle="tab" th:text="${selectCategory.categoryName}"></a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane" th:id="${selectCategory.categoryName}"
+                                 th:each="selectCategory:${tags}">
+                                <span class="label label-info" th:each="selectTag:${selectCategory.tags}">
+                                    <span class="glyphicon glyphicon-tag" onclick="selectTag(this)"
+                                        th:data-tag="${selectTag}"
+                                        th:text="${selectTag}">
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12">
                     <div class="col-lg-9 .col-md-12 .col-sm-12 .col-xs-12">
