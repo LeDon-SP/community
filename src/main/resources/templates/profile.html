@@ -37,7 +37,14 @@
                         <span th:text="${question.commentCount}"></span>个回复 ·
                         <span th:text="${question.viewCount}"></span>次浏览 ·
                         <span id="current-time"
-                              th:datetime="${#calendars.format(question.gmtCreate,'yyyy-MM-dd HH:mm:ss')}"></span>
+                              th:datetime="${#calendars.format(question.gmtCreate,'yyyy-MM-dd HH:mm:ss')}">
+                        </span> ·
+                        <span>
+                             <a class="community-menu" th:href="@{'/publish/'+${question.id}}"
+                                th:if="${session.user!=null && session.user.id == question.creator}">
+                                编辑
+                             </a>
+                        </span>
                     </span>
                 </div>
             </div>

@@ -64,13 +64,6 @@ public class PublishController {
             model.addAttribute("error","标签不能为空");
             return "publish";
         }
-
-        String invalid = Tagche.filterInvalid(tag);
-        if (StringUtils.isNotBlank(invalid)){
-            model.addAttribute("error","标签不存在"+invalid);
-            return "publish";
-        }
-
         User user = (User)request.getSession().getAttribute("user");
         if (user == null) {
             model.addAttribute("error", "用户未登录");
@@ -83,6 +76,12 @@ public class PublishController {
         question.setDescription(description);
         question.setTag(tag);
         question.setCreator(user.getId());
+
+        String invalid = Tagche.filterInvalid(tag);
+        if (StringUtils.isNotBlank(invalid)){
+            model.addAttribute("error","此标签不存在："+invalid);
+            return "publish";
+        }
 
         questionService.createOrUpdate(question);
         return "redirect:/";
