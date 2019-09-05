@@ -18,9 +18,9 @@
         <result column="comment_count" jdbcType="BIGINT" property="commentCount"/>
     </resultMap>
     <update id="incCommentCount" parameterType="life.ledon.community.model.Comment">
-    update comment
-    set
-    comment_count = comment_count + #{commentCount,jdbcType=INTEGER}
-    where id =#{id}
-  </update>
+        update comment
+        set
+        comment_count = comment_count + #{commentCount,jdbcType=INTEGER}
+        where id =#{id}
+    </update>
 </mapper>
