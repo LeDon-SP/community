@@ -24,6 +24,7 @@
             </h2>
             <hr>
 
+            <!--我的问题-->
             <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 box" th:if="${section=='questions'}">
                 <div class="media" th:each="question : ${pagination.data}">
                     <div class="media-left">
@@ -54,7 +55,7 @@
                 </div>
             </div>
 
-            <!--回复区域-->
+            <!--最新回复-->
             <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 box" th:if="${section=='replies'}">
                 <div class="media" th:each="notification : ${pagination.data}">
 
@@ -114,7 +115,7 @@
             <a href="/profile/replies" class="list-group-item"
                th:class="${section=='replies'}?'active list-group-item':'list-group-item'">
                 最新回复
-                <span class="badge" th:text="${unreadCount}"></span>
+                <span class="badge" th:text="${session.unreadCount}"></span>
             </a>
             <a href="#" class="list-group-item">Morbi leo risus</a>
             <a href="#" class="list-group-item">Porta ac consectetur ac</a>
