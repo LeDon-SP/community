@@ -28,6 +28,14 @@ body {
     height: 42px;
 }
 
+.media-text{
+    display: inline-block;
+    width: 15%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .comment-media .media-heading {
     padding-top: 0px;
 }
