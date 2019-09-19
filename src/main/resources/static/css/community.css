@@ -9,6 +9,10 @@ body {
     /*2fa9ff*/
 }
 
+.box h4{
+    padding-top: 15px;
+}
+
 .main {
     margin: 30px auto;
     width: 65%;
@@ -36,6 +40,10 @@ body {
     text-overflow: ellipsis;
 }
 
+.media-body {
+    padding-bottom: 15px;
+}
+
 .comment-media .media-heading {
     padding-top: 0px;
 }
@@ -50,7 +58,7 @@ body {
 }
 
 .comment-area {
-    margin-bottom: 10px;
+
 }
 
 .comment-area .btn-comment {
@@ -181,6 +189,10 @@ body {
 .related-bottom{
     margin-bottom: 15px;
     margin-top: 0px;
+}
+
+.related-part ul{
+    padding-bottom: 15px;
 }
 
 .right-words{

@@ -118,7 +118,7 @@
                     <div class="media-left">
                         <a href="#">
                             <img class="media-object img-rounded"
-                                 th:src="${question.user.avatarUrl}" alt="头像">
+                                 th:src="${session.user != null ?session.user.avatarUrl : '/images/default-avatar.png'}" alt="头像">
                         </a>
                     </div>
                     <div class="media-body">
