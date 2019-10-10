@@ -28,7 +28,7 @@
     <div class="col-lg-9 .col-md-12 .col-sm-12 .col-xs-12">
         <!--正文-->
         <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 box top-info">
-            <h3><span th:text="${question.title}"></span></h3>
+            <div class="question-title"><span th:text="${question.title}"></span></div>
             <span class="text-desc">
                 作者：<span th:text="${question.user.name}"></span>
                 &nbsp;|&nbsp;&nbsp;发布时间：<span class="current-time"
@@ -65,10 +65,10 @@
 
         <!--评论列表-->
         <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 box comment-count">
-            <h4>
+            <div class="span-title">
                 <span th:text="${question.commentCount}"></span>
                 个回复
-            </h4>
+            </div>
             <hr class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 comment-sp">
             <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 comment-part" th:each="comment : ${comments}">
                 <div class="comment-media">
@@ -132,10 +132,10 @@
     </div>
 
     <!--右侧导航栏-->
-    <div class="col-lg-3 .col-md-12 .col-sm-12 .col-xs-12">
+    <div class="col-lg-3 .col-md-12 .col-sm-12 .col-xs-12 question-right">
         <!--发起人-->
         <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 box question-promoter">
-            <h4>发起人</h4>
+            <div class="span-title">发起人</div>
             <div class="media">
                 <div class="media-left">
                     <a href="#">
@@ -152,12 +152,12 @@
         </div>
         <!--广告位-->
         <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 box question-AD">
-            <h4 class="right-words">壁纸</h4>
+            <div class="span-title right-words">壁纸</div>
             <img th:src="@{~/images/a.jpg}" alt="广告" class="img-thumbnail">
         </div>
         <!--相关问题-->
         <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 related-part  box">
-            <h4>相关问题</h4>
+            <div class="span-title">相关问题</div>
             <ul class="quesrion-related">
                 <li th:each="related:${relatedQuestions}">
                     <a th:href="@{'/question/'+${related.id}}" th:text="${related.title}"></a>

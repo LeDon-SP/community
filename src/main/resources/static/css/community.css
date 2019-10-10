@@ -9,13 +9,31 @@ body {
     /*2fa9ff*/
 }
 
-.box h4{
+.index-title{
+    margin-top: 0px;
     padding-top: 15px;
 }
 
+.index-title span{
+    font-size: 24px;
+}
+
 .main {
-    margin: 30px auto;
     width: 65%;
+}
+
+.main-right{
+    margin-left: -5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.main-centre{
+    margin-bottom: 20px;
+}
+
+.main-right box{
+    padding: 15px;
 }
 
 .btn-publish {
@@ -68,7 +86,7 @@ body {
 
 .comment-count {
     margin-top: 15px;
-    padding-top: 20px;
+    /*padding-top: 20px;*/
 }
 
 .comment-sp {
@@ -115,6 +133,7 @@ body {
 .comment-input {
     margin-top: 15px;
     padding-top: 35px;
+    margin-bottom: 50px;
 }
 
 .text-desc {
@@ -150,6 +169,11 @@ body {
     text-decoration: none;
 }
 
+.question-title{
+    padding-top: 10px;
+    font-size: 24px;
+}
+
 .question-promoter {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -168,6 +192,11 @@ body {
 
 .question-tag{
     margin-right: 5px;
+}
+
+.question-right{
+    margin-left: -5px;
+    margin-top: -30px;
 }
 
 .quesrion-related{
@@ -193,6 +222,7 @@ body {
 
 .related-part ul{
     padding-bottom: 15px;
+    padding-top: 5px;
 }
 
 .right-words{
@@ -210,3 +240,9 @@ body {
     display: inline-block;
     white-space: normal;
 }
+
+.span-title{
+    font-size: 18px;
+    padding-top: 15px;
+}
+

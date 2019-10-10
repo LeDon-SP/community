@@ -2,8 +2,9 @@ package life.ledon.community.service;
 
 import life.ledon.community.dto.PaginationDTO;
 import life.ledon.community.dto.QuestionDTO;
-/*import life.ledon.community.exception.CustomizeErrorCode;
-import life.ledon.community.exception.CustomizeException;*/
+import life.ledon.community.dto.QuestionQueryDTO;
+import life.ledon.community.exception.CustomizeErrorCode;
+import life.ledon.community.exception.CustomizeException;
 import life.ledon.community.mapper.QuestionExtMapper;
 import life.ledon.community.mapper.QuestionMapper;
 import life.ledon.community.mapper.UserMapper;
@@ -31,10 +32,20 @@ public class QuestionService {
     @Autowired
     private QuestionExtMapper questionExtMapper;
 
-    public PaginationDTO list(Integer page, Integer size) {
+    public PaginationDTO list(String search,Integer page, Integer size) {
+
+        if (StringUtils.isNotBlank(search)){
+            String[] tag = StringUtils.split(search, " ");
+            search = Arrays.stream(tag).collect(Collectors.joining("|"));
+        }else {
+            search = null;
+        }
+
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalPage;
-        Integer totalCount = (int) questionMapper.countByExample(new QuestionExample());
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount = questionExtMapper.countBySearch(questionQueryDTO);
         //计算总页数
         totalPage = (totalCount % size == 0) ? (totalCount / size) : (totalCount / size + 1);
 
@@ -52,7 +63,9 @@ public class QuestionService {
         Integer offset = page < 0 ? 0 : size * (page - 1);
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");
-        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(questionExample, new RowBounds(offset, size));
+        questionQueryDTO.setPage(offset);
+        questionQueryDTO.setSize(size);
+        List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
         List<QuestionDTO> questionDTOList = new ArrayList<>();
 
         for (Question question : questions) {
@@ -112,9 +125,9 @@ public class QuestionService {
 
     public QuestionDTO getById(Long id) {
         Question question = questionMapper.selectByPrimaryKey(id);
-        /*if (question == null){
+        if (question == null){
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
-        }*/
+        }
         QuestionDTO questionDTO = new QuestionDTO();
         BeanUtils.copyProperties(question, questionDTO);
         User user = userMapper.selectByPrimaryKey(question.getCreator());
@@ -141,9 +154,9 @@ public class QuestionService {
             QuestionExample example = new QuestionExample();
             example.createCriteria().andIdEqualTo(question.getId());
             int updated = questionMapper.updateByExampleSelective(updateQuestion, example);
-            /*if (updated != 1){
+            if (updated != 1){
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
-            }*/
+            }
         }
     }
 
