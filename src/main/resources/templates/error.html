@@ -10,12 +10,16 @@
     <script th:src="@{~/js/bootstrap.min.js}" type="application/javascript"></script>
 </head>
 <body>
+<!--顶部导航栏-->
 <div th:insert="navigation :: nav"></div>
 <div class="jumbotron">
     <h1>出错了！！！</h1>
     <p th:text="${message}">服务太热啦，要不然稍等一会儿再来试试？？！</p>
     <p><a class="btn btn-primary btn-lg" href="/" role="button">回到主页</a></p>
 </div>
+
+<!--底部Copyright-->
+<div th:insert="footer :: foot"></div>
 </body>
 <script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
 <script>

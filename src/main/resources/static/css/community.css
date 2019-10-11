@@ -246,3 +246,8 @@ body {
     padding-top: 15px;
 }
 
+.footer{
+    margin-top: 15px;
+    color: #666;
+    padding: 5px 33%;
+}
