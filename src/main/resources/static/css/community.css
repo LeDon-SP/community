@@ -1,5 +1,7 @@
 body {
     background-color: #efefef;
+    background-attachment:fixed;
+    background-image:url('../images/bg.png');
 }
 
 .box {
@@ -52,7 +54,6 @@ body {
 
 .media-text{
     display: inline-block;
-    width: 15%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

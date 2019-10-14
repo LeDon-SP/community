@@ -1,5 +1,26 @@
 ## Bat Cave
 
+## 部署
+### 依赖
+- Git
+- JDK
+- Maven
+- MySQL
+## 步骤
+- yum update
+- yum install git
+- mkdir App
+- cd App
+- git clone https://github.com/LeDon-SP/community.git
+- yum install maven
+- mvn -v
+- mvn clean compile package
+- cp src/main/resources/application.yml src/main/resources/application-production.yml
+- vim src/main/resources/application-production.yml
+- java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
+- ps -aux | grep java
+- mvn package
+
 ## 资料
 [Spring文档](https://spring.io/guides)
 
