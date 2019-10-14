@@ -3,6 +3,10 @@
 <head>
     <title>Bat Cave</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{~/css/bootstrap-theme.min.css}">
     <link rel="stylesheet" th:href="@{~/css/community.css}">
@@ -19,7 +23,7 @@
 </div>
 
 <!--底部Copyright-->
-<div th:insert="footer :: foot"></div>
+<div th:insert="footer :: foot" class="footer"></div>
 </body>
 <script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
 <script>
