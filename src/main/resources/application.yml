@@ -3,7 +3,7 @@ server:
 github:
   client:
     id: e05d34e830a2eaab39fb
-    secret: ea3c75dd2428fac8b217eec32bcbeccee3ab368d
+    secret: c0147d9c620e1856ee7f048685464fe0f32639e1
   redirect:
     uri: http://localhost:8888/callback
 ucloud:
