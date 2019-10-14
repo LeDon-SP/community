@@ -27,3 +27,14 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
+logging:
+  file:
+    max-size: 100MB
+    max-history: 30
+  level:
+    root: info
+    life:
+      ledon:
+        community:
+          mapper: debug
+  path: logs
