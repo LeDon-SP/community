@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="shortcut icon" th:href="@{~/images/logo.ico}" type="image/x-icon"/>
     <title th:text="${sectionName}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -19,11 +20,11 @@
 <!--顶部导航栏-->
 <div th:insert="navigation :: nav"></div>
 
-<div class="container-fluid main profile">
+<div class="container-fluid main">
     <!--问题区域-->
-    <div class="col-lg-9 .col-md-12 .col-sm-12 .col-xs-12">
+    <div class="col-lg-9 .col-md-12 .col-sm-12 .col-xs-12 profile-centre">
         <div class="col-lg-12 .col-md-12 .col-sm-12 .col-xs-12 box">
-            <h2>
+            <h2 class="index-title">
                 <span th:text="${sectionName}"></span>
             </h2>
             <hr>
@@ -113,7 +114,7 @@
 
     <!--右侧导航栏-->
     <div class="col-lg-3 .col-md-12 .col-sm-12 .col-xs-12">
-        <div class="list-group section">
+        <div class="list-group profile-right">
             <a href="/profile/questions" class="list-group-item active"
                th:class="${section=='questions'}?'active list-group-item':'list-group-item'">我的问题</a>
             <a href="/profile/replies" class="list-group-item"
@@ -121,15 +122,16 @@
                 最新回复
                 <span class="badge" th:text="${session.unreadCount}"></span>
             </a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
+            <a href="#" class="list-group-item">敬请期待...</a>
+            <a href="#" class="list-group-item">敬请期待...</a>
+            <a href="#" class="list-group-item">敬请期待...</a>
         </div>
     </div>
 </div>
 
 <!--底部Copyright-->
-<div th:insert="footer :: foot" class="footer"></div>
+<div th:insert="footer :: foot" class="footer" style="margin-top: 35px;"></div>
+
 </body>
 <script>
     // 自动更新
