@@ -1,6 +1,15 @@
 html{
     height: 100%;
 }
+
+h4{
+    font-size: 2rem;
+}
+
+li{
+    font-size: 1.7rem;
+}
+
 body {
     background-color: #efefef;
     background-attachment:fixed;
@@ -11,6 +20,7 @@ body {
     min-height: 100%;
     height: auto;
     width: 100%;
+    font-size: 1.7rem;
 }
 
 textarea{
@@ -42,7 +52,7 @@ textarea{
 }
 
 .index-title span{
-    font-size: 24px;
+    font-size: 3rem;
 }
 
 .main {
@@ -171,7 +181,7 @@ textarea{
 }
 
 .text-desc {
-    font-size: 12px;
+    font-size: 1.4rem;
     font-weight: normal;
     color: #999;
 }
@@ -261,9 +271,14 @@ textarea{
     margin-top: 0px;
 }
 
+.related-part{
+    margin-bottom: 5px;
+}
+
 .related-part ul{
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     padding-top: 5px;
+    margin-bottom: 0px;
 }
 
 .right-words{
